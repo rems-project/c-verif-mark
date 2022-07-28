@@ -20,10 +20,10 @@ In person for those in Cambridge, or by zoom with a link TBA.
 
 Let me know!  So far we hope for (but please confirm) at least: 
 
-- Andrew Appel/Lennart Beringer, VST
+- Andrew Appel/Lennart Beringer, VST  (confirmed)
 - Bart Jacobs, VeriFast
-- Michael Sammler, RefinedC 
-- Thomas Sewell, seL4 approaches
+- Michael Sammler, RefinedC  (confirmed)
+- Thomas Sewell, seL4 approaches (confirmed)
 - Shankar, PVS2C
 
 - ...more? 
