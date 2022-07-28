@@ -16,13 +16,16 @@ We'll meet Wednesday 3 August 2022, 2pm - 5pm UK time (BST=UTC+1), 3-6pm Central
 
 In person for those in Cambridge, or by zoom with a link TBA. 
 
-## Potential short status-update/future-plan talks
+## Potential short status-update/future-plan talks (15 minutes each)
 
-Let me know!  So far we hope for at least: 
+Let me know!  So far we hope for (but please confirm) at least: 
 
 - Andrew Appel/Lennart Beringer, VST
 - Bart Jacobs, VeriFast
+- Michael Sammler, RefinedC 
 - Thomas Sewell, seL4 approaches
+- Shankar, PVS2C
+
 - ...more? 
 
 - Discussion of examples
@@ -50,6 +53,7 @@ Several tools have suites of small and large examples that have been done in tha
 - the VST [catalog of (small and large) examples](https://github.com/PrincetonUniversity/VST/blob/master/doc/catalog-of-examples.md)
 - the VeriFast [examples](https://github.com/verifast/verifast/tree/master/examples)
 - the Frama-C [tutorials](https://frama-c.com/html/tutorials.html)
+- the Viper [online examples](http://viper.ethz.ch/examples/binary-search-array.html)   (not C)
 
 Then there are suites for automated-tool competitions such as SV-COMP https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks - far too many examples there for interactive tools, but one might pull some out, or it might be interesting to compare with the fully automated tools for simple properties.
 
