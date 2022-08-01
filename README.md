@@ -16,17 +16,17 @@ We'll meet Wednesday 3 August 2022, 2pm - 5pm UK time (BST=UTC+1), 3-6pm Central
 
 In person for those in Cambridge, or by zoom with a link TBA. 
 
-## Potential short status-update/future-plan talks (15 minutes each)
+## Schedule: short status-update/lessons-learned/limitations/future-plan talks (15 minutes each)
 
-Let me know!  So far we hope for (but please confirm) at least: 
+- 2.00 - 2.15 Peter Sewell (University of Cambridge), Introduction
+- 2.15 - 2.30 Andrew Appel/Lennart Beringer (Princeton), VST
+- 2.40 - 2.55 Bart Jacobs (KU Leuven), VeriFast
+- 3.05 - 3.20 Michael Sammler (MPI-SWS), RefinedC
+- 3.30 - 3.45 Gregory Malecha (BedRock Systems Inc.), BedRock
+- 3.55 - 4.10 Thomas Sewell (University of Cambridge), seL4 approaches
+- 4.20 - 4.35 Zhong Shao (Yale), CertiKOS approach
+- ...  - 5.00 Discussion (and in the gaps)
 
-- Andrew Appel/Lennart Beringer, VST  (confirmed)
-- Bart Jacobs, VeriFast
-- Michael Sammler, RefinedC  (confirmed)
-- Thomas Sewell, seL4 approaches (confirmed)
-- Shankar, PVS2C
-
-- ...more? 
 
 - Discussion of examples
 
