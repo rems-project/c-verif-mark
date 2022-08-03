@@ -2,21 +2,23 @@
 
 This arose from discussions with people at the Isaac Newton Institute [Verified Software](https://www.newton.ac.uk/event/vso2/) programme.
 
-Looking at the various approaches and tools for verifying functional correctness of C code - especially for systems code - it's not always easy to understand their strengths and limitations.   Automated verification has obviously benefited from various competitions (see [Alastair Reid's summary](https://alastairreid.github.io/verification-competitions/).  For interactive tools comparison is harder, but it should be worthwhile to collect a modest-size set of small examples, each involving some interesting language feature and/or programming idiom, and inviting tool authors (and others) to submit model solutions for them - preferably with detailed explanations of what's going on under the hood, at least for selected examples.  In some cases it might be worth having multiple solutions, e.g. if automation means that the easiest solution isn't the most instructive, or not representative of what one would have to do in a bigger verification.
+
+Verifying functional correctness of C code remains a critically important challenge, especially for the systems code that aims to enforce security. 
+Looking at the many approaches and tools for C verification, it's not always easy to understand their strengths and limitations, and, while many have supported impressive verifications, none are as easy to use and as flexible as one might want.   There are almost as many approaches as there are verification projects.  It would be good as a community to develop a shared understanding of the key issues and best approaches to them, and of the state of the art of the various tools, to drive future progress. 
+
+Automated verification has benefited from various competitions (see [Alastair Reid's summary](https://alastairreid.github.io/verification-competitions/).  For interactive verification, comparison is harder, but it would be worthwhile to collect a modest-size set of small examples, each involving some interesting language feature and/or programming idiom, and inviting tool authors (and others) to submit model solutions for them - preferably with detailed explanations of what's going on under the hood, at least for selected examples.  In some cases it might be worth having multiple solutions, e.g. if automation means that the easiest solution isn't the most instructive, or not representative of what one would have to do in a bigger verification.
 
 One could also collect a longer simple list of C features and idioms and ask whether (or to what extent) each tool handles them, maybe with code examples, but (to avoid making contributions overwhelming) without requiring example solutions for all those.
 
-I'm imagining something quite lightweight, broadly along the lines of long-ago POPLmark - e.g., after collecting some agreed set of examples and questions, just having a shared github repo that tool authors could add solutions and answers to.  The aim would be simply to expose a clear comparison in this highly multidimensional space, not to have a competition (no judging, scores, or winners).
+The aim is for something quite lightweight, broadly along the lines of our long-ago [POPLmark](https://www.seas.upenn.edu/~plclub/poplmark/) - e.g., after collecting some agreed set of examples and questions, just having a shared github repo that tool authors could add solutions and answers to.  The idea would be simply to expose a clear comparison in this highly multidimensional space, not to have a competition (no judging, scores, or winners).
 
 One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction. 
 
 ## Schedule
 
-We'll meet Wednesday 3 August 2022, 2pm - 5pm UK time (BST=UTC+1), 3-6pm Central Europe (CEST=UTC+2), 9am-12noon East-coast USA (EDT=UTC-4), 6am-9am West-coast USA (PDT=UTC-7), 10pm-1am Seoul (KST=UTC+9), 11pm-2am Sydney (AEST=UTC+10).
+We'll have an initial meeting on Wednesday 3 August 2022, 2pm - 5pm UK time (BST=UTC+1), which is 3-6pm Central Europe (CEST=UTC+2), 9am-12noon East-coast USA (EDT=UTC-4), 6am-9am West-coast USA (PDT=UTC-7), 10pm-1am Seoul (KST=UTC+9), 11pm-2am Sydney (AEST=UTC+10).  This can be in person for those in Cambridge, in Room 2 of the INI, or by zoom with a link TBA. 
 
-In person for those in Cambridge, or by zoom with a link TBA. 
-
-## Schedule: short status-update/lessons-learned/limitations/future-plan talks (15 minutes each)
+We'll have short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches (though by no means all). 
 
 - 2.00 - 2.15 Peter Sewell (University of Cambridge), Introduction
 - 2.15 - 2.30 Andrew Appel/Lennart Beringer (Princeton), VST
@@ -28,23 +30,29 @@ In person for those in Cambridge, or by zoom with a link TBA.
 - ...  - 5.00 Discussion (and in the gaps)
 
 
-- Discussion of examples
+In the gaps, and at the end, we'll discuss the accumulation of:
 
-- Discussion of C feature/idiom list
+- key verification tool design issues and solutions
+- examples to use to explain and compare how existing tools work
+- C features and idioms to assess tool coverage
 
 
-## Previous comparisons 
+## Previous functional-correctness verification comparisons 
 
-There have been several previous comparisons over the years,  but I don't see anything that quite hits the spot. 
+There have been several previous comparisons over the years, but I don't see anything that exactly hits the above goals.
 
-- [The 1st Verified Software Competition: Extended Experience Report](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/krml214.pdf), 2010/2011.  Vladimir Klebanov, Peter Müller, Natarajan Shankar, Gary T. Leavens, Valentin Wüstholz, Eyad Alkassar, Rob Arthan, Derek Bronish, Rod Chapman, Ernie Cohen, Mark Hillebrand, Bart Jacobs, K. Rustan M. Leino, Rosemary Monahan, Frank Piessens, Nadia Polikarpova, Tom Ridge, Jan Smans, Stephan Tobies, Thomas Tuerk, Mattias Ulbrich, and Benjamin Weiß
-- [The 2nd Verified Software Competition: Experience Report](https://hal.inria.fr/hal-00798777/document), 2011. Jean-Christophe Filliâtre, Andrei Paskevich, Aaron Stump
-- [VerifyThis](https://www.pm.inf.ethz.ch/research/verifythis.html), 2011-2021. Marie Farrell, Peter Lammich. 
-- [lets-prove-leftpad](https://github.com/hwayne/lets-prove-leftpad). Hillel Wayne
 - [A benchmark for C program verification](https://www.cs.ru.nl/~freek/cbench/cbench.pdf)  (cbench [repo](https://github.com/cverified/cbench/)), 2019. Marko van Eekelen, Daniil Frumin, Herman Geuvers, Léon Gondelman, Robbert Krebbers, Marc Schoolderman, Sjaak Smetsers, Freek Verbeek, Benoı̂t Viguier, Freek Wiedijk
+- [lets-prove-leftpad](https://github.com/hwayne/lets-prove-leftpad). Hillel Wayne
+- [VerifyThis](https://www.pm.inf.ethz.ch/research/verifythis.html), 2011-2021. Marie Farrell, Peter Lammich. 
+- [The 2nd Verified Software Competition: Experience Report](https://hal.inria.fr/hal-00798777/document), 2011. Jean-Christophe Filliâtre, Andrei Paskevich, Aaron Stump
+- [The 1st Verified Software Competition: Extended Experience Report](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/krml214.pdf), 2010/2011.  Vladimir Klebanov, Peter Müller, Natarajan Shankar, Gary T. Leavens, Valentin Wüstholz, Eyad Alkassar, Rob Arthan, Derek Bronish, Rod Chapman, Ernie Cohen, Mark Hillebrand, Bart Jacobs, K. Rustan M. Leino, Rosemary Monahan, Frank Piessens, Nadia Polikarpova, Tom Ridge, Jan Smans, Stephan Tobies, Thomas Tuerk, Mattias Ulbrich, and Benjamin Weiß
 
 Of these, cbench and lets-prove-leftpad are perhaps the closest, but several of those examples are rather complex, and they don't exactly target the language features and idioms that arise in systems code. . 
 
+
+## Automated verification competitions
+
+There are suites for automated-tool competitions such as SV-COMP https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks - far too many examples there for interactive tools, but one might pull some out, or it might be interesting to compare with the fully automated tools for simple properties.
 
 ## Other existing sets of examples
 
@@ -55,7 +63,7 @@ Several tools have suites of small and large examples that have been done in tha
 - the Frama-C [tutorials](https://frama-c.com/html/tutorials.html)
 - the Viper [online examples](http://viper.ethz.ch/examples/binary-search-array.html)   (not C)
 
-Then there are suites for automated-tool competitions such as SV-COMP https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks - far too many examples there for interactive tools, but one might pull some out, or it might be interesting to compare with the fully automated tools for simple properties.
+
 
 
 ## Candidate examples
