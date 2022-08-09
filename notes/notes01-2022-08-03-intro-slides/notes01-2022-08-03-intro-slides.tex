@@ -1,0 +1,175 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+\definecolor{DarkGreen}{rgb}{0.0, 0.4, 0.23} % not so dark
+
+\usepackage{amsfonts}
+\newcommand{\tick}{\checkmark}
+\newcommand{\cross}{$\times$}
+
+
+\newcommand{\myhref}[2]{\href{#2}{#1}}
+
+%\setbeamertemplate{footline}[page number]
+\newcommand{\setpresentershort}[1]{\setbeamertemplate {footline}{\tiny{}#1\insertpagenumber/\pageref{LastPage}
+    %\strut\quad{}Peter Sewell\quad{}Underpinning the foundations
+    \hfill}}
+\newcommand{\setpresenter}[1]{\setbeamertemplate {footline}{\tiny{}#1\insertpagenumber/\pageref{LastPage}\strut%\quad{}Peter Sewell\quad{}Underpinning the foundations
+    \hfill}}
+%  \inserttotalframenumber
+%\setbeamertemplate {footline}{\quad\hfill\insertframenumber\strut\quad}
+%\setpresenter{Peter}
+\setpresenter{}
+
+\beamertemplatenavigationsymbolsempty
+\setbeamersize{text margin left=5mm,text margin right=5mm} 
+\setbeamertemplate{frametitle}[default][center]
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+
+
+
+
+
+\usepackage[T1]{fontenc}
+
+
+\newenvironment{tightenumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{tightitemize}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+
+\definecolor{mc}{rgb}{0.0,0.35,0.35}
+\definecolor{emc}{rgb}{0.9,0.0,0.4}
+\newcommand{\mc}{\color{mc}}
+\newcommand{\emc}{\color{emc}}
+
+
+\usepackage{listings}
+\lstset{showstringspaces=false}
+
+%\lstset{basicstyle=\footnotesize\ttfamily} %
+%\lstset{keywordstyle=\pmb}
+%\lstset{basicstyle=\footnotesize\ttfamily} %
+\lstset{basicstyle=\ttfamily} %
+\lstset{keywordstyle=\bfseries}
+\lstset{language=C}
+\lstset{mathescape}
+
+\lstset{escapeinside={<@}{@>}}
+
+
+
+
+\begin{document}
+
+\begin{frame}
+  \Large
+
+  \begin{center}
+    C functional correctness verification comparison\\
+    (C-verif-mark?)
+
+    \
+
+
+    {\large     Peter Sewell \\
+      University of Cambridge }
+
+    \
+
+    {\tiny    2022-08-03 Isaac Newton Institute, Verified Software (VSO2) }
+  \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{C functional correctness verification}
+Crucial -- especially for security-critical systems code
+
+  \
+
+  Still a major research problem -- despite many impressive projects, it's still much harder and more limited than we would like
+
+  \
+
+\pause
+  
+Hard to understand the state of the art:
+\begin{itemize}
+\item there are almost as many approaches as there are verification projecs
+\item the papers don't always give a clear view of their current strengths, limitations, and future plans,
+\item ...or an overview of the design challenges and best solutions.
+\end{itemize}
+
+\pause
+
+So, can we establish a better comparison, and shared understanding of the verification-tool design space and alternatives?
+
+\end{frame}
+
+
+\begin{frame}{Previous comparisons}
+
+  Automated tools:  many very successful  (SV-COMP,...)
+
+  \
+
+  Interactive tools:
+  \begin{tightitemize}
+ 
+\item \myhref{A benchmark for C program verification}{https://www.cs.ru.nl/~freek/cbench/cbench.pdf}
+\item \myhref{lets-prove-leftpad}{https://github.com/hwayne/lets-prove-leftpad}.
+\item \myhref{VerifyThis}{https://www.pm.inf.ethz.ch/research/verifythis.html}, 2011-2021. 
+\item \myhref{The 2nd Verified Software Competition: Experience Report}{https://hal.inria.fr/hal-00798777/document}, 2011. 
+\item \myhref{The 1st Verified Software Competition: Extended Experience Report}{}
+  \end{tightitemize}
+  \pause
+  Not quite hitting the spot?
+\end{frame}
+
+\begin{frame}{Goals}
+  \begin{itemize}
+  \item lightweight (shared github repo, no separate assessment)
+  \item aiming to expose a clear comparison in this multidimensional space \\(not a ``competition'' -- no judging, scores, or winners)
+  \item aiming for better understanding of how the different approaches vary
+  \item aiming to stimulate future research
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Mechanisms}
+  \begin{itemize}
+\item these talks
+  \item smallish collection of smallish examples
+    \begin{itemize}
+    \item exercising various C language features and programming idioms
+    \item small enough for solutions to not be too much work
+    \item ask (for at least some) for the most \emph{instructive} solution, not the shortest, and for detailed explanations of what's going on under the hood
+    \end{itemize}
+  \item larger list of C language features and programming idioms
+  \item one or two large examples to focus on scaling
+  \item (ideally, ultimately) consensus list of main design challenges and options
+  \end{itemize}
+\end{frame}
+    
+
+  
+  
+
+
+\end{document}
