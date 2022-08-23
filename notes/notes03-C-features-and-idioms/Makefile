@@ -1,6 +1,6 @@
 all: README.md
 
-SRC=types.ml template.ml answers_VST.ml main.ml 
+SRC=types.ml template.ml answers_*.ml main.ml
 
 main: $(SRC)
 	ocamlc -o main $(SRC)
