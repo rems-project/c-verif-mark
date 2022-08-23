@@ -72,6 +72,7 @@ Several tools have suites of small and large examples that have been done in tha
 
 See [here](notes/notes03-C-features-and-idioms.md)
 
+ 
 
 ## Andrew Appel's Desiderata for examples
 - Multilevel: The C program must not only be proved to implement a functional model, the functional model must be proved to actually do the desired thing.
@@ -95,6 +96,8 @@ Starting very simple, so that one can really explain what the tool is doing:
 - the `cbench` factorial examples 2.1 - 2.4
 - the VST sum-of-array example
 - ...
+
+[yes](. tooltip)
 
 
 
