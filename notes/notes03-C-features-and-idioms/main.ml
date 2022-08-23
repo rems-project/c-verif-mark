@@ -2,6 +2,7 @@ open Types;;
 
 let data = [
     ("VST", Answers_VST.data);
+    ("Isabelle C-parser", Answers_ISA_C.data);
   ] 
 
 let render_answer a1 a2 = if a2="" then a1 else " [" ^ a1 ^ "](. \"" ^ a2 ^ "\")"
