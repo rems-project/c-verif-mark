@@ -8,33 +8,35 @@ Looking at the many approaches and tools for C verification, it's not always eas
 
 Automated verification has benefited from various competitions (see [Alastair Reid's summary](https://alastairreid.github.io/verification-competitions/).  For interactive verification, comparison is harder, but it would be worthwhile to collect a modest-size set of small examples, each involving some interesting language feature and/or programming idiom, and inviting tool authors (and others) to submit model solutions for them - preferably with detailed explanations of what's going on under the hood, at least for selected examples.  In some cases it might be worth having multiple solutions, e.g. if automation means that the easiest solution isn't the most instructive, or not representative of what one would have to do in a bigger verification.
 
-One could also collect a longer simple list of C features and idioms and ask whether (or to what extent) each tool handles them, maybe with code examples, but (to avoid making contributions overwhelming) without requiring example solutions for all those.
+We can also collect a longer simple list of C features and idioms and ask whether (or to what extent) each tool handles them, maybe with code examples, but (to avoid making contributions overwhelming) without requiring example solutions for all those.
 
-The aim is for something quite lightweight, broadly along the lines of our long-ago [POPLmark](https://www.seas.upenn.edu/~plclub/poplmark/) - e.g., after collecting some agreed set of examples and questions, just having a shared github repo that tool authors could add solutions and answers to.  The idea would be simply to expose a clear comparison in this highly multidimensional space, not to have a competition (no judging, scores, or winners).
+The aim is for something quite lightweight, broadly along the lines of our long-ago [POPLmark](https://www.seas.upenn.edu/~plclub/poplmark/) - e.g., after collecting some agreed set of examples and questions, just having a shared github repo that tool authors could add solutions and answers to.  The idea would be simply to expose a clear comparison and better understanding of this highly multidimensional space, not to have a competition (no judging, scores, or winners).
 
 
 
-## Schedule
+## Initial meeting talks
 
-We'll have an initial meeting on Wednesday 3 August 2022, 2pm - 5pm UK time (BST=UTC+1), which is 3-6pm Central Europe (CEST=UTC+2), 9am-12noon East-coast USA (EDT=UTC-4), 6am-9am West-coast USA (PDT=UTC-7), 10pm-1am Seoul (KST=UTC+9), 11pm-2am Sydney (AEST=UTC+10).  This can be in person for those in Cambridge, in Room 2 of the INI, or by zoom with a link TBA. 
+We had an initial meeting on Wednesday 3 August 2022, at the Isaac Newton Institute (and online), as part of the [VSO2](https://www.newton.ac.uk/event/vso2/) programme.  This had 
+short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches. One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant, but for these talks we focus on the first.
 
-We'll have short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches. One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant, but for these talks we focus on the first.
-
-- 2.00 - 2.15 Peter Sewell (University of Cambridge), Introduction
-- 2.15 - 2.30 Andrew Appel/Lennart Beringer (Princeton), VST  14:22
-- 2.40 - 2.55 Bart Jacobs (KU Leuven), VeriFast
-- 3.05 - 3.20 Michael Sammler (MPI-SWS), RefinedC
+- 2.00 - 2.15 [Peter Sewell (University of Cambridge), Introduction](notes/notes02-2022-08-03-INI-all-slides/Peter_Sewell_Intro.pdf)
+- 2.15 - 2.30 [Andrew Appel/Lennart Beringer (Princeton), VST](notes/notes02-2022-08-03-INI-all-slides/Andrew_Appel_VST.pdf)
+- 2.40 - 2.55 [Bart Jacobs (KU Leuven), VeriFast](notes/notes02-2022-08-03-INI-all-slides/Bart_Jacobs_VeriFast.pptx)
+- 3.05 - 3.20 [Michael Sammler (MPI-SWS), RefinedC](notes/notes02-2022-08-03-INI-all-slides/Michael_Sammler_RefinedC.pdf)
 - 3.30 - 3.45 Gregory Malecha (BedRock Systems Inc.), BedRock
-- 3.55 - 4.10 Thomas Sewell (University of Cambridge), seL4 approaches
-- 4.20 - 4.35 Zhong Shao (Yale), CertiKOS approach
+- 3.55 - 4.10 [Thomas Sewell (University of Cambridge), seL4 approaches](notes/notes02-2022-08-03-INI-all-slides/Thomas_Sewell_seL4.pdf)
+- 4.20 - 4.35 [Zhong Shao (Yale), CertiKOS approach](notes/notes02-2022-08-03-INI-all-slides/Zhong_Shao_CertiKOS.pdf)
 - ...  - 5.00 Discussion (and in the gaps)
 
+    Discussion of 
 
-In the gaps, and at the end, we'll discuss the accumulation of:
+    - key verification tool design issues and solutions
+    - examples to use to explain and compare how existing tools work
+    - C features and idioms to assess tool coverage
 
-- key verification tool design issues and solutions
-- examples to use to explain and compare how existing tools work
-- C features and idioms to assess tool coverage
+
+The videos should appear on the [VSO2 page](https://www.newton.ac.uk/event/vso2/) in due course.
+
 
 
 ## Previous functional-correctness verification comparisons 
@@ -52,13 +54,13 @@ Of these, cbench and lets-prove-leftpad are perhaps the closest, but several of 
 
 ## Automated verification competitions
 
-There are suites for automated-tool competitions such as SV-COMP https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks - far too many examples there for interactive tools, but one might pull some out, or it might be interesting to compare with the fully automated tools for simple properties.
+There are suites for automated-tool competitions such as SV-COMP (10k "verification tasks")  https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks - far too many examples there for interactive tools, but one might pull some out, or it might be interesting to compare with the fully automated tools for simple properties.
 
 ## Other existing sets of examples
 
 Several tools have suites of small and large examples that have been done in that system, e.g.:
 
-- the VST [catalog of (small and large) examples](https://github.com/PrincetonUniversity/VST/blob/master/doc/catalog-of-examples.md)
+- [VST catalog of examples](https://github.com/PrincetonUniversity/VST/blob/master/doc/catalog-of-examples.md) (small examples at the end of that page)
 - the VeriFast [examples](https://github.com/verifast/verifast/tree/master/examples)
 - the Frama-C [tutorials](https://frama-c.com/html/tutorials.html)
 - the Viper [online examples](http://viper.ethz.ch/examples/binary-search-array.html)   (not C)
@@ -81,71 +83,20 @@ Starting very simple, so that one can really explain what the tool is doing:
 
 ##  Candidate C feature/idiom list
 
-Here's a fairly ad hoc list that one might improve and then use for comparison of tools.  The aim is to be discriminating while not being too long.  Some answers might need text to explain what semantics the tool assumes, not just yes/no, though it would be good to be compact enough so that the results can be presented as a (large) table. 
-
-- integer arithmetic
-    - usual arithmetic conversions
-    - arithmetic UBs
-    - ABI variants
-- floats
-    - floating types
-- characters and strings
-    - string literals (incl. their potential aliasing)
-    - C11 character-set features
-- structured data
-    - basic structs
-    - basic enums
-    - basic unions
-    - struct-as-value memory accesses and arguments/returns
-    - union-as-value memory accesses and arguments/returns
-    - compound type initialisers
-    - bitfields
-    - flexible array members
-    - variable length arrays
-- control flow 
-    - C evaluation order
-    - loops (for, while, do, break, continue)
-    - switch (incl. structured vs general)
-    - C goto within a block
-    - C goto leaving a block
-    - C goto entering a block
-    - function pointers
-    - non-local jumps (setjump.h)
-    - signal handling (signal.h)
-- function calls
-    - mutable function parameters
-    - variadic arguments
-    - function parameters of array type with "static" or *
-- lifetime
-    - block lifetimes
-    - thread-local storage
-- memory object model
-    - basic model (fully concrete/fully abstract/PNVI-*/whatever)
-    - passing addresses of locals in function calls
-    - storing addresses of locals (e.g. in globals)
-    - pointer/integer casts (incl. arith on unused/unused bits)
-    - pointer arithmetic using offset-of 
-    - subobject provenance
-    - effective types
-    - uninitialised reads
-    - restrict
-    - register
-- unsequenced races
-- concurrency   (C/C++11 or Linux-kernel fragments)
-    - volatile
-- C11 generic selection
-- standard library
+See <notes/notes03-C-features-and-idioms.md>
 
 
-...and various ownership idioms.
+## Andrew Appel's Desiderata for examples
+- Multilevel: The C program must not only be proved to implement a functional model, the functional model must be proved to actually do the desired thing.
+- Unified: The C-program proof and high-level proof should be done in the same logical framework so that they can be composed into a single end-to-end theorem.
+- Composable: if not in the same logical framework, some principled way to link the high-level proof with the low-level verification.
+- Low-expressive: The proof system for C-program proofs should be expressive enough to verify "dusty deck" programs that do all-too-clever things with data representations.
+- High-expressive: The proof system for high-level proofs should be expressive enough to verify high-level specifications with entirely nontrivial application-specific mathematics.
+- Modular: modular verification of modular programs with data abstraction.
+- Open-source: The C program and its proofs (low-level and high-level) should be open-source.
+- Documented: (if possible) in a paper so people can understand what it's about.
+- 32/64-bit: Programs/proofs that are not portable must be marked as 32-bit or 64-bit.
 
 
--------------------------
-
-zhong: concurrency?
-
-andrew: modular verification?
- ...list of desiderat:
-mutltilevel
 
 
