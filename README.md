@@ -97,7 +97,7 @@ Starting very simple, so that one can really explain what the tool is doing:
 - the VST sum-of-array example
 - ...
 
-[yes](. tooltip)
+[yes](./README.md tooltip)
 
 
 
