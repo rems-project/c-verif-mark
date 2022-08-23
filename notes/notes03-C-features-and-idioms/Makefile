@@ -5,8 +5,8 @@ SRC=types.ml template.ml answers_VST.ml main.ml
 main: $(SRC)
 	ocamlc -o main $(SRC)
 
-index.md: main
-	./main > index.md
+index.md: main preamble.md
+	(cat preamble.md && ./main) > index.md
 
 clean:
 	rm -rf *~ *.cmi *.cmo
