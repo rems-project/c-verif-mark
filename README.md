@@ -17,7 +17,7 @@ The aim is for something quite lightweight, broadly along the lines of our long-
 ## Initial meeting talks
 
 We had an initial meeting on Wednesday 3 August 2022, at the Isaac Newton Institute (and online), as part of the [VSO2](https://www.newton.ac.uk/event/vso2/) programme.  This had 
-short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches. One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant, but for these talks we focus on the first.
+short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches. One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant, but these talks focussed just on the first.
 
 - 2.00 - 2.15 [Peter Sewell (University of Cambridge), Introduction](notes/notes02-2022-08-03-INI-all-slides/Peter_Sewell_Intro.pdf)
 - 2.15 - 2.30 [Andrew Appel/Lennart Beringer (Princeton), VST](notes/notes02-2022-08-03-INI-all-slides/Andrew_Appel_VST.pdf)
@@ -72,34 +72,9 @@ Several tools have suites of small and large examples that have been done in tha
 
 See [here](notes/notes03-C-features-and-idioms/README.md)
 
- 
+## Candidate examples  
 
-## Andrew Appel's Desiderata for examples
-- Multilevel: The C program must not only be proved to implement a functional model, the functional model must be proved to actually do the desired thing.
-- Unified: The C-program proof and high-level proof should be done in the same logical framework so that they can be composed into a single end-to-end theorem.
-- Composable: if not in the same logical framework, some principled way to link the high-level proof with the low-level verification.
-- Low-expressive: The proof system for C-program proofs should be expressive enough to verify "dusty deck" programs that do all-too-clever things with data representations.
-- High-expressive: The proof system for high-level proofs should be expressive enough to verify high-level specifications with entirely nontrivial application-specific mathematics.
-- Modular: modular verification of modular programs with data abstraction.
-- Open-source: The C program and its proofs (low-level and high-level) should be open-source.
-- Documented: (if possible) in a paper so people can understand what it's about.
-- 32/64-bit: Programs/proofs that are not portable must be marked as 32-bit or 64-bit.
-
-
-## Candidate examples
-
-Starting very simple, so that one can really explain what the tool is doing:
-
-- some straight-line simple arithmetic, composing statements
-- a function taking an `int *p` and returning `p+1`
-- simple array update
-- the `cbench` factorial examples 2.1 - 2.4
-- the VST sum-of-array example
-- ...
-
-[yes](. "tooltip")
-
-
+See [here](notes/notes04-examples/README.md)
 
 
 
