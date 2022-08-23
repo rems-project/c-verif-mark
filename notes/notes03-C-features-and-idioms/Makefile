@@ -1,12 +1,12 @@
-all: index.md
+all: README.md
 
 SRC=types.ml template.ml answers_VST.ml main.ml 
 
 main: $(SRC)
 	ocamlc -o main $(SRC)
 
-index.md: main preamble.md
-	(cat preamble.md && ./main) > index.md
+README.md: main preamble.md
+	(cat preamble.md && ./main) > README.md
 
 clean:
 	rm -rf *~ *.cmi *.cmo
