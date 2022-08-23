@@ -1,15 +1,15 @@
 | |VST|
 |-|-|
-| *integer arithmetic* |
+| **integer arithmetic** |
 |usual arithmetic conversions|Y         |
 |arithmetic UBs|Y         |
 |ABI variants|some      |
-| *floats* |
+| **floats** |
 |floating types|Y         |
-| *characters and strings* |
+| **characters and strings** |
 |string literals (incl. potential aliasing)|Y         |
 |C11 character-set features|some      |
-| *structured data* |
+| **structured data** |
 |basic structs|Y         |
 |basic enums|Y         |
 |basic unions|Y         |
@@ -19,7 +19,7 @@
 |bitfields|n         |
 |flexible array members|some      |
 |variable length arrays|some      |
-| *control flow* |
+| **control flow** |
 |C loose ISO specification of evaluation order| [Y         ](. "PS: really?")|
 |loops (for, while, do, break, continue)|Y         |
 |switch (structured)|Y         |
@@ -30,14 +30,14 @@
 |function pointers|Y         |
 |non-local jumps (setjump.h)|n         |
 |signal handling (signal.h)|some      |
-| *function calls* |
+| **function calls** |
 |mutable function parameters|Y         |
 |variadic arguments|some      |
 |function parameters of array type with "static" or *|Y         |
-| *lifetime* |
+| **lifetime** |
 |block lifetimes (precise or lifted to function scope)|lifted    |
 |thread-local storage|n         |
-| *memory object model* |
+| **memory object model** |
 |basic model (fully concrete/fully abstract/CompCert block+offset/PNVI-ae-udi/whatever)|CompCert block+offset (PS:?)|
 |passing addresses of locals in function calls|Y         |
 |storing addresses of locals (e.g. in globals)|Y         |
@@ -48,13 +48,13 @@
 |uninitialised reads|n         |
 |restrict|some      |
 |register|some      |
-| *concurrency* |
+| **concurrency** |
 |unsequenced races|some      |
 |idealised SC concurrency|          |
 |C/C++11|          |
 |Linux-kernel|yes(?)    |
 |volatile|          |
-| *other* |
+| **other** |
 |C11 generic selection|          |
 |multiple compilation units|          |
 |standard library|          |

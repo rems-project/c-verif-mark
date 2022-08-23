@@ -5,7 +5,7 @@ SRC=types.ml template.ml answers_VST.ml main.ml
 main: $(SRC)
 	ocamlc -o main $(SRC)
 
-table.md: main
+index.md: main
 	./main > index.md
 
 clean:
