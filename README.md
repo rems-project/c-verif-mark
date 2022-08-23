@@ -70,7 +70,7 @@ Several tools have suites of small and large examples that have been done in tha
 
 ##  Candidate C feature/idiom list
 
-See [here](notes/notes03-C-features-and-idioms.md)
+See [here](notes/notes03-C-features-and-idioms/README.md)
 
  
 
