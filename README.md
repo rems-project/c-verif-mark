@@ -68,22 +68,9 @@ Several tools have suites of small and large examples that have been done in tha
 
 
 
-## Candidate examples
-
-Starting very simple, so that one can really explain what the tool is doing:
-
-- some straight-line simple arithmetic, composing statements
-- a function taking an `int *p` and returning `p+1`
-- simple array update
-- the `cbench` factorial examples 2.1 - 2.4
-- the VST sum-of-array example
-- ...
-
-
-
 ##  Candidate C feature/idiom list
 
-See <notes/notes03-C-features-and-idioms.md>
+See [here](notes/notes03-C-features-and-idioms.md)
 
 
 ## Andrew Appel's Desiderata for examples
@@ -96,6 +83,19 @@ See <notes/notes03-C-features-and-idioms.md>
 - Open-source: The C program and its proofs (low-level and high-level) should be open-source.
 - Documented: (if possible) in a paper so people can understand what it's about.
 - 32/64-bit: Programs/proofs that are not portable must be marked as 32-bit or 64-bit.
+
+
+## Candidate examples
+
+Starting very simple, so that one can really explain what the tool is doing:
+
+- some straight-line simple arithmetic, composing statements
+- a function taking an `int *p` and returning `p+1`
+- simple array update
+- the `cbench` factorial examples 2.1 - 2.4
+- the VST sum-of-array example
+- ...
+
 
 
 
