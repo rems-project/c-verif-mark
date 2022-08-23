@@ -1,4 +1,4 @@
-all: table.md
+all: index.md
 
 SRC=types.ml template.ml answers_VST.ml main.ml 
 
@@ -6,7 +6,7 @@ main: $(SRC)
 	ocamlc -o main $(SRC)
 
 table.md: main
-	./main > table.md
+	./main > index.md
 
 clean:
 	rm -rf *~ *.cmi *.cmo

@@ -10,7 +10,7 @@ let lookup q d = match (List.find_map (function x -> match x with Q(q',a1,a2) wh
 
 let render_item x =
   match x with
-  | H s -> "| *" ^ s ^ "* |\n"
+  | H s -> "| **" ^ s ^ "** |\n"
   | Q(q, a1, a2) -> "|" ^ q ^ "|" ^ String.concat "|" (List.map (function (_,d) -> lookup q d) data) ^ "|\n"
                   
 let render_header = "| |" ^ String.concat "|" (List.map (function (toolname,_) -> toolname) data) ^ "|\n"
