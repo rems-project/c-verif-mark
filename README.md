@@ -22,13 +22,13 @@ One could focus just on verifying C code as-is, or also cover the various approa
 We had an initial meeting on Wednesday 3 August 2022, at the Isaac Newton Institute and online, as part of the [VSO2](https://www.newton.ac.uk/event/vso2/) programme.  This had 
 short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches.  The videos and most slides are available:
 
-- 2.00 - 2.15 [Peter Sewell (University of Cambridge), Introduction](https://www.newton.ac.uk/seminar/36483)   [Slides](notes/notes02-2022-08-03-INI-all-slides/Peter_Sewell_Intro.pdf)
-- 2.15 - 2.30 [Andrew Appel/Lennart Beringer (Princeton), VST](https://www.newton.ac.uk/seminar/36847)   [Slides](notes/notes02-2022-08-03-INI-all-slides/Andrew_Appel_VST.pdf)
-- 2.40 - 2.55 [Bart Jacobs (KU Leuven), VeriFast](https://www.newton.ac.uk/seminar/36848)   [Slides](notes/notes02-2022-08-03-INI-all-slides/Bart_Jacobs_VeriFast.pptx)
-- 3.05 - 3.20 [Michael Sammler (MPI-SWS), RefinedC](https://www.newton.ac.uk/seminar/36849)   [Slides](notes/notes02-2022-08-03-INI-all-slides/Michael_Sammler_RefinedC.pdf)
+- 2.00 - 2.15 [Peter Sewell (University of Cambridge), Introduction](https://www.newton.ac.uk/seminar/36483).   [Slides](notes/notes02-2022-08-03-INI-all-slides/Peter_Sewell_Intro.pdf)
+- 2.15 - 2.30 [Andrew Appel/Lennart Beringer (Princeton), VST](https://www.newton.ac.uk/seminar/36847).   [Slides](notes/notes02-2022-08-03-INI-all-slides/Andrew_Appel_VST.pdf)
+- 2.40 - 2.55 [Bart Jacobs (KU Leuven), VeriFast](https://www.newton.ac.uk/seminar/36848).   [Slides](notes/notes02-2022-08-03-INI-all-slides/Bart_Jacobs_VeriFast.pptx)
+- 3.05 - 3.20 [Michael Sammler (MPI-SWS), RefinedC](https://www.newton.ac.uk/seminar/36849).   [Slides](notes/notes02-2022-08-03-INI-all-slides/Michael_Sammler_RefinedC.pdf)
 - 3.30 - 3.45 [Gregory Malecha (BedRock Systems Inc.), BedRock](https://www.newton.ac.uk/seminar/36851)
-- 3.55 - 4.10 [Thomas Sewell (University of Cambridge), seL4 approaches](https://www.newton.ac.uk/seminar/36850)   [Slides](notes/notes02-2022-08-03-INI-all-slides/Thomas_Sewell_seL4.pdf)
-- 4.20 - 4.35 [Zhong Shao (Yale), CertiKOS approach](https://www.newton.ac.uk/seminar/36852)   [Slides](notes/notes02-2022-08-03-INI-all-slides/Zhong_Shao_CertiKOS.pdf)
+- 3.55 - 4.10 [Thomas Sewell (University of Cambridge), seL4 approaches](https://www.newton.ac.uk/seminar/36850).   [Slides](notes/notes02-2022-08-03-INI-all-slides/Thomas_Sewell_seL4.pdf)
+- 4.20 - 4.35 [Zhong Shao (Yale), CertiKOS approach](https://www.newton.ac.uk/seminar/36852).   [Slides](notes/notes02-2022-08-03-INI-all-slides/Zhong_Shao_CertiKOS.pdf)
 - ...  - 5.00 Discussion (and in the gaps)
 
     Discussion of 
