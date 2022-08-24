@@ -14,10 +14,13 @@ The aim is for something quite lightweight, broadly along the lines of our long-
 
 
 
+One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant - so far we've focussed mostly on the first, but for the other two one could ask for solutions that are essentially the same as the C examples. 
+
+
 ## Initial meeting talks
 
 We had an initial meeting on Wednesday 3 August 2022, at the Isaac Newton Institute (and online), as part of the [VSO2](https://www.newton.ac.uk/event/vso2/) programme.  This had 
-short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches. One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant, but these talks focussed just on the first.
+short status-update/lessons-learned/limitations/future-plan talks (15 minutes each) for several of the existing approaches.  This is just a selection limited by availability and the schedule; it's missing several major approaches. 
 
 - 2.00 - 2.15 [Peter Sewell (University of Cambridge), Introduction](notes/notes02-2022-08-03-INI-all-slides/Peter_Sewell_Intro.pdf)
 - 2.15 - 2.30 [Andrew Appel/Lennart Beringer (Princeton), VST](notes/notes02-2022-08-03-INI-all-slides/Andrew_Appel_VST.pdf)
@@ -39,7 +42,9 @@ The videos should appear on the [VSO2 page](https://www.newton.ac.uk/event/vso2/
 
 
 
-## Previous functional-correctness verification comparisons 
+## Previous work
+
+### Previous functional-correctness verification comparisons 
 
 There have been several previous comparisons over the years, but I don't see anything that exactly hits the above goals.
 
@@ -52,11 +57,11 @@ There have been several previous comparisons over the years, but I don't see any
 Of these, cbench and lets-prove-leftpad are perhaps the closest, but several of those examples are rather complex, and they don't exactly target the language features and idioms that arise in systems code.
 
 
-## Automated verification competitions
+### Automated verification competitions
 
 There are suites for automated-tool competitions such as SV-COMP (10k "verification tasks")  https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks - far too many examples there for interactive tools, but one might pull some out, or it might be interesting to compare with the fully automated tools for simple properties.
 
-## Other existing sets of examples
+### Other existing sets of examples
 
 Several tools have suites of small and large examples that have been done in that system, e.g.:
 
@@ -72,9 +77,20 @@ Several tools have suites of small and large examples that have been done in tha
 
 See [here](notes/notes03-C-features-and-idioms/README.md)
 
-## Candidate examples  
+## Candidate examples
 
 See [here](notes/notes04-examples/README.md)
+
+## Generic questions for each approach
+
+- web links for tool, explanation, tutorial, existing examples
+- how it works overview
+- what C front-end
+- what connection to binary verification, if any
+- success highlights
+- limitations
+- future plans
+- licensing status
 
 
 
