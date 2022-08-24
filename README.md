@@ -14,7 +14,7 @@ The aim is for something quite lightweight, broadly along the lines of our long-
 
 
 
-One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant - so far we've focussed mostly on the first, but for the other two one could ask for solutions that are essentially the same as the C examples. 
+One could focus just on verifying C code as-is, or also cover the various approaches out there that verify something else and then generate C from that, or consider all verification at roughly the C level of abstraction.  All those are interesting and relevant - so far we've focussed mostly on the first, but for the other two one could ask for solutions that are essentially the same as the C examples.   Also interesting is comparison with the automated verification tools, for problems in the common scope. 
 
 
 ## Initial meeting talks
@@ -38,7 +38,9 @@ short status-update/lessons-learned/limitations/future-plan talks (15 minutes ea
     - C features and idioms to assess tool coverage
 
 
+## Mailing list
 
+There's a mailing list for discussion of this, which I'll try to keep very focussed - public archives but member-only posting, no conference announcements or other spam. 
 
 
 
